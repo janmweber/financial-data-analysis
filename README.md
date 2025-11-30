@@ -1,37 +1,26 @@
-# Financial Data Analysis & Visualization
+# Financial Data Analysis Project
 
-This project analyzes and visualizes historical performance, volatility, and correlations of a configurable set of stocks using daily market data from Yahoo Finance.
+Small project to download, clean, and explore stock price data.
 
-## Current Focus
+## What this project does
 
-Default ticker universe (configured in `config/config.json`):
+- Downloads daily price data from Yahoo Finance for a set of tickers.
+- Cleans and combines the data into one table.
+- Prepares basic features like daily returns and simple rolling stats.
+- Sets things up for simple analysis and plots.
 
-- NVDA, AAPL, MSFT, GOOGL, ORCL, PLTR
+Default tickers (in `config/config.json`): NVDA, AAPL, MSFT, GOOGL, ORCL, PLTR.
 
-Time horizon:
+## How to use it (high level)
 
-- From 2019-01-01 to the latest available date (daily data).
+1. Edit `config/config.json` to choose tickers and dates.
+2. Run `src/download_data.py` to fetch and save raw CSVs to `data/raw/`.
+3. Open `notebooks/02_data_cleaning.ipynb` to load, clean, and save processed data to `data/processed/`.
+4. Use additional notebooks for analysis and plots (work in progress).
 
-## High-Level Workflow
+## Folders
 
-1. Configure tickers and date range in `config/config.json`.
-2. Acquire data from Yahoo Finance (via `yfinance`) and store it under `data/raw/`.
-3. Clean and prepare the data, saving processed datasets under `data/processed/`.
-4. Perform exploratory analysis and compute basic statistics.
-5. Create visualizations for prices, returns, volatility, and correlations.
-
-## Project Structure
-
-- `data/`
-  - `raw/` – original downloaded CSV files
-  - `processed/` – cleaned and merged datasets
-- `notebooks/` – Jupyter notebooks for cleaning, analysis, and visualization
-- `src/` – Python scripts and helper modules (e.g., data download, utilities)
-- `config/` – configuration files, including `config.json`
-- `PROJECT_SCOPE.md` – more detailed description of goals and questions
-
-## Next Steps
-
-- Set up a Python virtual environment.
-- Install core dependencies (`pandas`, `numpy`, `matplotlib`, `seaborn`, `yfinance`, `jupyter`).
-- Implement the data acquisition script and initial notebooks.
+- `data/` – raw and processed CSV files.
+- `notebooks/` – Jupyter notebooks.
+- `src/` – Python scripts (download and helpers).
+- `config/` – project config (`config.json`).
