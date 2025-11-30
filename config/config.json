@@ -1,0 +1,13 @@
+{
+  "tickers": [
+    "NVDA",
+    "AAPL",
+    "MSFT",
+    "GOOGL",
+    "ORCL",
+    "PLTR"
+  ],
+  "start_date": "2019-01-01",
+  "end_date": "today",
+  "frequency": "1d"
+}
